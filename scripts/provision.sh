@@ -105,6 +105,7 @@ update-alternatives --set phpize /usr/bin/phpize7.2
 
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
+/usr/local/bin/composer config -g repo.packagist composer https://packagist.laravel-china.org
 
 # Install Laravel Envoy & Installer
 
@@ -335,10 +336,13 @@ groups vagrant
 
 apt-get install -y nodejs
 /usr/bin/npm install -g npm
+/usr/bin/npm config set registry http://registry.npm.taobao.org/
 /usr/bin/npm install -g gulp-cli
 /usr/bin/npm install -g bower
 /usr/bin/npm install -g yarn
+/usr/bin/yarn config set registry http://registry.npm.taobao.org/
 /usr/bin/npm install -g grunt-cli
+
 
 # Install SQLite
 
